@@ -4,7 +4,7 @@ var scrape = require('../scripts/scrape.js');
 var headlinesController = require('../controllers/headlines.js');
 var notesController = require('../controllers/notes.js');
 
-//basic route use cb return json data
+//basic route use callback and return json data
 router.get('/', function(req, res) {
     res.render('home');
 });
@@ -29,21 +29,21 @@ router.get('/check', function(req, res) {
     });
 });
 
-//get notes
+//get notes from mongodb
 router.post('/gather', function(req, res) {
     notesController.gather(req.body, function(data) {
         res.json(data);
     });
 });
 
-//post save note
+//post save note into mongodb
 router.post('/save', function(req, res) {
     notesController.save(req.body, function(data) {
         res.json(data);
     });
 });
 
-//delete note
+//delete note from mongodb
 router.delete('/delete', function(req, res) {
     notesController.delete(req.body, function(data) {
         res.json(data);

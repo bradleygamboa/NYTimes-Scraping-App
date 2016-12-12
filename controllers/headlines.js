@@ -8,7 +8,7 @@ var Note = require('../models/Note');
 exports.fetch = function() {
 
   //run scrape function
-  scrape("http://www.theonion.com", function(data) {
+  scrape("http://www.nytimes.com", function(data) {
     var obj = data;
 
     //create user-readable date

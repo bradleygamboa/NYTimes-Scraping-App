@@ -1,5 +1,5 @@
 var makeDate = function() {
-    //custom date maker
+    //makes date
     var d = new Date();
     var formattedDate = "";
     formattedDate = formattedDate + (d.getMonth() + 1) + "_";

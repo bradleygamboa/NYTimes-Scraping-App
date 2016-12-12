@@ -3,8 +3,8 @@ var path = require('path');
 var app = express();
 var mongoose = require('mongoose');
 
-// Mongoose Connection
-var db = 'mongodb://heroku_xp4bh4sv:7tpu9f40ero5gbd5ear8mtnhj5@ds127998.mlab.com:27998/heroku_xp4bh4sv';
+/*Mongoose Connect*/
+var db = 'mongodb://localhost/mongoHeadlines';
 mongoose.connect(db, function(err){
   if(err){
     console.log(err);
@@ -16,7 +16,6 @@ mongoose.connect(db, function(err){
 app.use(express.static(__dirname + '/public'));
 var port = 3000;
 
-// Handlebars
 var expressHandlebars = require('express-handlebars');
 app.engine('handlebars', expressHandlebars({
     defaultLayout: 'main'
@@ -30,7 +29,6 @@ app.use(bodyParser.urlencoded({
 
 var routes = require('./config/routes.js');
 
-//Used Routes
 app.use('/', routes);
 app.use('/test', routes);
 app.use('/fetch', routes);

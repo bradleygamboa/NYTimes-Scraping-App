@@ -1,28 +1,20 @@
 {
-  "name": "scraping-app",
+  "name": "mongo_homework",
   "version": "1.0.0",
-  "description": "scraping news app",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bradleygamboa/Scraping-App.git"
-  },
-  "author": "bradley gamboa",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bradleygamboa/Scraping-App/issues"
-  },
-  "homepage": "https://github.com/bradleygamboa/Scraping-App#readme",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "cheerio": "^0.22.0",
-    "express": "^4.14.0",
+    "body-parser": "^1.15.0",
+    "cheerio": "^0.20.0",
+    "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
-    "mongoose": "^4.7.1",
+    "mongoose": "^4.4.6",
     "path": "^0.12.7",
-    "request": "^2.79.0"
+    "request": "^2.69.0"
   }
 }

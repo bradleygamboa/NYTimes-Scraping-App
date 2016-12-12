@@ -24,9 +24,9 @@ var mongoData;
 var dataCount = 0;
 var dataDate;
 
-//rotating cube state
+//square state
 var state = 0;
-var cubeRotateAry = ['show-front', 'show-back', 'show-right', 'show-left', 'show-top', 'show-bottom'];
+var square = ['show-front', 'show-back', 'show-right', 'show-left', 'show-top', 'show-bottom'];
 var sideAry = ['back', 'right', 'left', 'top', 'bottom', 'front'];
 
 //ajax get news data function
@@ -186,14 +186,14 @@ var headline = function() {
 
 //add click event function
 var clickBox = function() {
-  $("#cube").on("click", function() {
+  $("#square").on("click", function() {
     //rotate cycle
     if (state <= 5) {
       state++;
     } else {
       state = 0;
     }
-    $('#cube').removeClass().addClass(cubeRotateAry[state]);
+    $('#square').removeClass().addClass(square[state]);
     
     //animate text
     typeIt();

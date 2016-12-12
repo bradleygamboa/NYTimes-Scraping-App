@@ -19,11 +19,11 @@ h1 {
     width: 700px;
     margin: auto;
     color: deepskyblue;
-    font-size: 60px;
+    font-size: 80px;
     font-family: titleFont;
 }
 
-#city {
+#alice {
     background-image: url("../../assets/images/alice.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -40,7 +40,7 @@ h1 {
     perspective: 1000px;
 }
 
-#cube {
+#square {
     margin: 8% auto 0 auto;
     width: 400px;
     height: 400px;
@@ -48,7 +48,7 @@ h1 {
     transform: translateZ( -100px);
 }
 
-#cube figure {
+#square figure {
     margin: 0;
     width: 400px;
     height: 400px;
@@ -61,7 +61,7 @@ h1 {
 
 #face-color {
     background-color: white;
-    opacity: 0.075;
+    opacity: 0.025;
     width: 400px;
     height: 400px;
     position: absolute;

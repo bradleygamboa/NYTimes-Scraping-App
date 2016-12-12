@@ -4,7 +4,9 @@ var app = express();
 var mongoose = require('mongoose');
 
 /*Mongoose Connect*/
-var db = 'mongodb://heroku_xp4bh4sv:7tpu9f40ero5gbd5ear8mtnhj5@ds127998.mlab.com:27998/heroku_xp4bh4sv';
+var db = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL ||
+    'mongodb://heroku_xp4bh4sv:7tpu9f40ero5gbd5ear8mtnhj5@ds127998.mlab.com:27998/heroku_xp4bh4sv';
+
 mongoose.connect(db, function(err){
   if(err){
     console.log(err);

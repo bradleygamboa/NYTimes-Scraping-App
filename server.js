@@ -14,7 +14,7 @@ mongoose.connect(db, function(err){
 });
 
 app.use(express.static(__dirname + '/public'));
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 var expressHandlebars = require('express-handlebars');
 app.engine('handlebars', expressHandlebars({

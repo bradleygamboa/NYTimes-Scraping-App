@@ -194,9 +194,7 @@ var clickBox = function() {
       state = 0;
     }
     $('#cube').removeClass().addClass(cubeRotateAry[state]);
-
-    //animate headline
-    headline();
+    
     //animate text
     typeIt();
     //render notes

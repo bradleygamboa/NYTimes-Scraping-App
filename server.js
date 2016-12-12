@@ -15,7 +15,7 @@ var dbURI = 'mongodb://heroku_xp4bh4sv:7tpu9f40ero5gbd5ear8mtnhj5@ds127998.mlab.
 // });
 
 app.use(express.static(__dirname + '/public'));
-// var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3000;
 
 if (process.env.MONGODB_URI) {
     mongoose.connect(process.env.MONGODB_URI);
@@ -55,6 +55,6 @@ app.use('/save', routes);
 app.use('/delete', routes);
 
 
-// app.listen(port, function() {
-//     console.log("lisenting on port:" + port);
-// });
+app.listen(port, function() {
+    console.log("lisenting on port:" + port);
+});
